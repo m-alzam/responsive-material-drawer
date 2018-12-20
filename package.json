@@ -1,12 +1,10 @@
 {
-  "name": "material-starter-kit",
+  "name": "material-responsive-example",
   "version": "0.1.0",
   "main": "index.js",
-  "description": "Built with Material Starter Kit, a file template to get you up and running with Material Components for the Web.",
   "scripts": {
     "build": "webpack -p",
-    "//": "If you are building your app locally, in the following line remove everything after webpack-dev-server",
-    "start": "webpack-dev-server --host 0.0.0.0 --disable-host-check --public $PROJECT_DOMAIN.glitch.me"
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -23,7 +21,10 @@
   },
   "dependencies": {
     "@material/button": "^0.41.0",
+    "@material/drawer": "^0.42.0",
+    "@material/elevation": "^0.41.0",
     "@material/ripple": "^0.41.0",
+    "@material/top-app-bar": "^0.42.0",
     "@material/typography": "^0.42.0"
   },
   "engines": {

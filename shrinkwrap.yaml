@@ -1,6 +1,9 @@
 dependencies:
   '@material/button': 0.41.0
+  '@material/drawer': 0.42.0
+  '@material/elevation': 0.41.0
   '@material/ripple': 0.41.0
+  '@material/top-app-bar': 0.42.0
   '@material/typography': 0.42.0
 devDependencies:
   babel-core: 6.26.3
@@ -34,6 +37,25 @@ packages:
     dev: false
     resolution:
       integrity: sha512-9mA/7P8yD3YPJ8ijwu0oOiT65OCa8Km3M9OF6VAsBE+XJS9Wo5hWDMgkv16raeOFeXj+1ALsjvuTz31JdcSkgQ==
+  /@material/dom/0.41.0:
+    dev: false
+    resolution:
+      integrity: sha512-wOJrMwjPddYXpQFZAIaCLWI3TO/6KU1lxESTBzunni8A4FHQVWhokml5Xt85GqZwmPFeIF2s+D0wfbWyrGBuKQ==
+  /@material/drawer/0.42.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/elevation': 0.41.0
+      '@material/list': 0.42.0
+      '@material/ripple': 0.42.0
+      '@material/rtl': 0.42.0
+      '@material/shape': 0.42.0
+      '@material/theme': 0.41.0
+      '@material/typography': 0.42.0
+      focus-trap: 3.0.0
+    dev: false
+    resolution:
+      integrity: sha512-9+PPpF7eeSYIYDlqHQJEl0n8JYgxyWcZYBVoymqDLXjcD/YJZ0zFT06U61/dz/7Zxx6bZ7xP/p+IGGJQHvaSYA==
   /@material/elevation/0.41.0:
     dependencies:
       '@material/animation': 0.41.0
@@ -41,6 +63,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ZtZS8z5ie9c7Cx5PVudgSorGYa0C3lu3dA+Nn6qJdhGUokl01msh54NfNuwk+EZsk65bNRRqw1Td/63TCbKIzg==
+  /@material/list/0.42.0:
+    dependencies:
+      '@material/base': 0.41.0
+      '@material/dom': 0.41.0
+      '@material/ripple': 0.42.0
+      '@material/rtl': 0.42.0
+      '@material/shape': 0.42.0
+      '@material/theme': 0.41.0
+      '@material/typography': 0.42.0
+    dev: false
+    resolution:
+      integrity: sha512-xmF52VRJdX+iwi1fQjlLkbRYJKR04LvqiSLAvrfJINEX5PzdfnCj2du1fP1KcBKQ0+ApX6OWsyHsf8/qHI8L4Q==
   /@material/ripple/0.41.0:
     dependencies:
       '@material/animation': 0.41.0
@@ -49,18 +83,47 @@ packages:
     dev: false
     resolution:
       integrity: sha512-rxEUVWM4AByDlTCH0kkthZQmUuY6eeN0X6cOHBoioFN2vUDk0D0Nfzz/N9FF2AlAf8C2lDDLrTuqnJPVIn+NHA==
+  /@material/ripple/0.42.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/theme': 0.41.0
+    dev: false
+    resolution:
+      integrity: sha512-wAVrppOjpvFJAeLL0hlTKRyTR9AJNHo5MzaKGrXqeq9Vt5exSk/ML9y5THE/SHwrJoF0sOWHgP9HEYi7opF6YA==
   /@material/rtl/0.40.1:
     dev: false
     resolution:
       integrity: sha512-Pk6Iw1/KrhWZoZtkDsPMDUW0bm7Z1zeXb3MTQRCFmjf1wU5cRxgOTtuoZLcJqlcKGppLAzJL/TJV3E7KEiuL0A==
+  /@material/rtl/0.42.0:
+    dev: false
+    resolution:
+      integrity: sha512-VrnrKJzhmspsN8WXHuxxBZ69yM5IwhCUqWr1t1eNfw3ZEvEj7i1g3P31HGowKThIN1dc1Wh4LE14rCISWCtv5w==
   /@material/shape/0.41.0:
     dev: false
     resolution:
       integrity: sha512-k1K3CjOVxclfb/0r28cOa2oJpP7QMA2fP0SOS3Vh8ale5Q2jkaHTL60KX8VkHvV6rMqShpXW+60gPjoz5XRbDQ==
+  /@material/shape/0.42.0:
+    dev: false
+    resolution:
+      integrity: sha512-E38QqeRoGLO38TOJT69rCBLJBnnXQ6Cmm/crjjl3TaLmqD17GiEJgPXzBdJ11lszBStSqR/gUXQX7P97LYruLw==
   /@material/theme/0.41.0:
     dev: false
     resolution:
       integrity: sha512-ohW2JxObKOWvP34EkIIcrEVtL3g0Gs/T3/MdOsM36euyshY8Jwl1f6fjVUQvVjSpixUtSb30/+ulblF8fTOwBg==
+  /@material/top-app-bar/0.42.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/elevation': 0.41.0
+      '@material/ripple': 0.42.0
+      '@material/rtl': 0.42.0
+      '@material/shape': 0.42.0
+      '@material/theme': 0.41.0
+      '@material/typography': 0.42.0
+    dev: false
+    resolution:
+      integrity: sha512-/ifxQpUZLUJu7i0HTahXxqfG3MuA90CR+cwsyNkTdJOHqjoKJSGBA8FnkyN5v7XQ5/ujrONy/P/QO+g8mzVEAw==
   /@material/typography/0.41.0:
     dev: false
     resolution:
@@ -1988,6 +2051,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
+  /focus-trap/3.0.0:
+    dependencies:
+      tabbable: 3.1.1
+      xtend: 4.0.1
+    dev: false
+    resolution:
+      integrity: sha512-jTFblf0tLWbleGjj2JZsAKbgtZTdL1uC48L8FcmSDl4c2vDoU4NycN1kgV5vJhuq1mxNFkw7uWZ1JAGlINWvyw==
   /follow-redirects/1.5.9:
     dependencies:
       debug: 3.1.0
@@ -4674,6 +4744,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
+  /tabbable/3.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-583MHIOwictf7+zbxqO/L5fBqMN6Li4SJ1XTKQA9WzHRA7c2BB+D+Ny7Y6kGqU2u+rHK59+oRzrBvMU53aZz+A==
   /tapable/0.2.8:
     dev: true
     engines:
@@ -5106,7 +5180,6 @@ packages:
     resolution:
       integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
   /xtend/4.0.1:
-    dev: true
     engines:
       node: '>=0.4'
     resolution:
@@ -5205,7 +5278,10 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@material/button': ^0.41.0
+  '@material/drawer': ^0.42.0
+  '@material/elevation': ^0.41.0
   '@material/ripple': ^0.41.0
+  '@material/top-app-bar': ^0.42.0
   '@material/typography': ^0.42.0
   babel-core: ^6.26.3
   babel-loader: ^7.1.5
