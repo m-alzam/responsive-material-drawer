@@ -1,5 +1,5 @@
-# Responsive layout with Material
-## An example using Material Components for the web to change the navigation layout based on screen width
+# Responsive navigation drawer with Material
+## An example using Material Components for the web to change the navigation drawer layout based on screen width
 
 This simple website template uses Material Components to implement a permanent navigation drawer for screen widths >900px, and a modal drawer for screen widths <900px. Check it out by resizing the width of your broswer window!
 
