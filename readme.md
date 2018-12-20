@@ -1,5 +1,5 @@
-# Material Starter Kit
-## A file template to help you get started with Material Components for the Web
+# Responsive web design with Material
+## An implem that toggles between types of navigation drawer at a breakpoint
 
 This file template sets up the `webpack` configuration and installs the `npm` packages required to get Material Components for the Web up and running. It simply displays a Material button that says "Hello World"!
 
