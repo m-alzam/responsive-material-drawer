@@ -1,7 +1,9 @@
-# Responsive web design with Material
-## An implem that toggles between types of navigation drawer at a breakpoint
+# Responsive layout with Material
+## An example using Material Components for the web to change the navigation layout based on screen width
 
-This file template sets up the `webpack` configuration and installs the `npm` packages required to get Material Components for the Web up and running. It simply displays a Material button that says "Hello World"!
+This simple website template uses Material Components to implement a permanent navigation drawer for screen widths >900px, and a modal drawer for screen widths <900px.
+
+Read more about the [Material Design responsive layout grid](https://material.io/design/layout/responsive-layout-grid.html).
 
 ## Interested in learning more?
 Check out the [Material Components for the Web](https://github.com/material-components/material-components-web) documentation to add more components and styling.
