@@ -3,7 +3,7 @@
 
 This simple website template uses Material Components to implement a permanent navigation drawer for screen widths >900px, and a modal drawer for screen widths <900px. Check it out by resizing the width of your browser window!
 
-Read more about the [Material Design responsive layout grid](https://material.io/design/layout/responsive-layout-grid.html).
+Read more about the [Material Design responsive layout grid](https://material.io/design/layout/responsive-layout-grid.html) or fork this project on [GitHub](https://github.com/bonniezhou/material-responsive-example).
 
 ## Interested in learning more?
 Check out the [Material Components for the Web](https://github.com/material-components/material-components-web) documentation to add more components and styling.
