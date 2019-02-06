@@ -1,4 +1,4 @@
-import {MDCTopAppBar} from '@material/top-app-bar/index';
+import {MDCTopAppBar} from '@material/top-app-bar';
 import {MDCDrawer} from "@material/drawer";
 import {MDCList} from "@material/list";
 
