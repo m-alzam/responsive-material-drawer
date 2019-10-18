@@ -41,6 +41,7 @@ if (window.matchMedia("(max-width: 900px)").matches) {
 
 const resizeHandler = () => {
   if (window.matchMedia("(max-width: 900px)").matches) {
+    if (list) list.destroy();
     initModalDrawer();
   } else {
     drawerElement.classList.remove("mdc-drawer--modal");
