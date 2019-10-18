@@ -29,10 +29,11 @@ const initModalDrawer = () => {
   });
 }
 
+let list = null;
 if (window.matchMedia("(max-width: 900px)").matches) {
   initModalDrawer();
 } else {
-  const list = new MDCList(listEl);
+  list = new MDCList(listEl);
   list.wrapFocus = true;
 }
 
