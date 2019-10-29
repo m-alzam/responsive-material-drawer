@@ -30,21 +30,28 @@ const initModalDrawer = () => {
 }
 
 let list = null;
+const initPermanentDrawer = () => {
+  list = new MDCList(listEl);
+  list.wrapFocus = true;
+}
+
 if (window.matchMedia("(max-width: 900px)").matches) {
   initModalDrawer();
 } else {
-  list = new MDCList(listEl);
-  list.wrapFocus = true;
+  initPermanentDrawer();
 }
 
 // Toggle between permanent drawer and modal drawer at breakpoint 900px
 
 const resizeHandler = () => {
+  
+  if (list) list.destroy();
+  drawerElement.classList.remove("mdc-drawer--modal");
+  
   if (window.matchMedia("(max-width: 900px)").matches) {
-    if (list) list.destroy();
     initModalDrawer();
   } else {
-    drawerElement.classList.remove("mdc-drawer--modal");
+    initPermanentDrawer();
   }
 }
 window.addEventListener('resize', resizeHandler);
