@@ -13,7 +13,7 @@ const mainContentEl = document.querySelector('.main-content');
 
 const topAppBar = new MDCTopAppBar(topAppBarElement);
 
-// Initialize drawer
+// To initialize either modal or permanent drawer
 
 const initModalDrawer = () => {
   drawerElement.classList.add("mdc-drawer--modal");
@@ -38,19 +38,10 @@ const initPermanentDrawer = () => {
   return list;
 }
 
-const initAppropriateDrawer = () => {
-  let drawer = null;
-  if (window.matchMedia("(max-width: 900px)").matches) {
-    drawer = initModalDrawer();
-  } else {
-    drawer = initPermanentDrawer();
-  }
-  return drawer;
-}
-
 // Toggle between permanent drawer and modal drawer at breakpoint 900px
 
-let drawer = initAppropriateDrawer();
+let drawer = window.matchMedia("(max-width: 900px)").matches ?
+    initModalDrawer() : initPermanentDrawer();
 
 const resizeHandler = () => { 
   if (window.matchMedia("(max-width: 900px)").matches && drawer instanceof MDCList) {
