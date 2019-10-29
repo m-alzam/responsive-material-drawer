@@ -27,31 +27,32 @@ const initModalDrawer = () => {
   listEl.addEventListener('click', (event) => {
     drawer.open = false;
   });
+  
+  return drawer;
 }
 
-let list = null;
 const initPermanentDrawer = () => {
-  list = new MDCList(listEl);
+  drawerElement.classList.remove("mdc-drawer--modal");
+  const list = new MDCList(listEl);
   list.wrapFocus = true;
+  return list;
 }
 
-if (window.matchMedia("(max-width: 900px)").matches) {
-  initModalDrawer();
-} else {
-  initPermanentDrawer();
+const initAppropriateDrawer = () => {
+  let drawer = null;
+  if (window.matchMedia("(max-width: 900px)").matches) {
+    drawer = initModalDrawer();
+  } else {
+    drawer = initPermanentDrawer();
+  }
+  return drawer;
 }
 
 // Toggle between permanent drawer and modal drawer at breakpoint 900px
 
-const resizeHandler = () => {
-  
-  if (list) list.destroy();
-  drawerElement.classList.remove("mdc-drawer--modal");
-  
-  if (window.matchMedia("(max-width: 900px)").matches) {
-    initModalDrawer();
-  } else {
-    initPermanentDrawer();
-  }
+let drawer = initAppropriateDrawer();
+const resizeHandler = () => { 
+  drawer.destroy();
+  drawer = initAppropriateDrawer();
 }
 window.addEventListener('resize', resizeHandler);
