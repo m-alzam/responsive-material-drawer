@@ -51,8 +51,14 @@ const initAppropriateDrawer = () => {
 // Toggle between permanent drawer and modal drawer at breakpoint 900px
 
 let drawer = initAppropriateDrawer();
+
 const resizeHandler = () => { 
-  drawer.destroy();
-  drawer = initAppropriateDrawer();
+  if (window.matchMedia("(max-width: 900px)").matches && drawer instanceof MDCList) {
+    drawer.destroy();
+    drawer = initModalDrawer();
+  } else if (window.matchMedia("(min-width: 900px)").matches && drawer instanceof MDCDrawer) {
+    drawer.destroy();
+    drawer = initPermanentDrawer();
+  }
 }
 window.addEventListener('resize', resizeHandler);
