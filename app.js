@@ -1,63 +1,14 @@
-import {MDCTopAppBar} from "@material/top-app-bar";
+import {MDCTopAppBar} from '@material/top-app-bar';
 import {MDCDrawer} from "@material/drawer";
-import {MDCList} from "@material/list";
 
-// Select DOM elements
+const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 
-const topAppBarElement = document.querySelector(".mdc-top-app-bar");
-const listEl = document.querySelector(".mdc-drawer .mdc-list");
-const drawerElement = document.querySelector(".mdc-drawer");
-const mainContentEl = document.querySelector(".main-content");
+const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+topAppBar.setScrollTarget(document.getElementById('main-content'));
+topAppBar.listen('MDCTopAppBar:nav', () => {
+    drawer.open = !drawer.open;
+});
 
-// Initialize either modal or permanent drawer
-
-const initModalDrawer = () => {
-    drawerElement.classList.add("mdc-drawer--modal");
-    drawerElement.classList.remove("mdc-top-app-bar--fixed-adjust");
-    const drawer = MDCDrawer.attachTo(drawerElement);
-    drawer.open = false;
-
-    const topAppBar = MDCTopAppBar.attachTo(topAppBarElement);
-    topAppBar.setScrollTarget(mainContentEl);
-    topAppBar.listen("MDCTopAppBar:nav", () => {
-        drawer.open = !drawer.open;
-    });
-
-    listEl.addEventListener("click", event => {
-        drawer.open = false;
-    });
-
-    return drawer;
-};
-
-const initPermanentDrawer = () => {
-    drawerElement.classList.remove("mdc-drawer--modal");
-    drawerElement.classList.add("mdc-top-app-bar--fixed-adjust");
-    const list = new MDCList(listEl);
-    list.wrapFocus = true;
-    return list;
-};
-
-let drawer = window.matchMedia("(max-width: 900px)").matches
-    ? initModalDrawer()
-    : initPermanentDrawer();
-
-// Toggle between permanent drawer and modal drawer at breakpoint 900px
-
-const resizeHandler = () => {
-    if (
-        window.matchMedia("(max-width: 900px)").matches &&
-        drawer instanceof MDCList
-    ) {
-        drawer.destroy();
-        drawer = initModalDrawer();
-    } else if (
-        window.matchMedia("(min-width: 900px)").matches &&
-        drawer instanceof MDCDrawer
-    ) {
-        drawer.destroy();
-        drawer = initPermanentDrawer();
-    }
-};
-
-window.addEventListener("resize", resizeHandler);
+document.querySelector(".mdc-drawer-scrim").addEventListener("click", () => {
+    drawer.open = !drawer.open;
+});

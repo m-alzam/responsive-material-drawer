@@ -7,42 +7,55 @@
 
 
 body {
-  background: #ffffff;
-  display: flex; // Removes top gap between modal drawer and viewport
-  height: 100vh; // Ensures that permanent drawer extends to bottom of viewport
-  margin: 0; // Removes top gap between top app bar and viewport
+  display: flex;
+  height: 100vh;
+  margin: 0;
 }
 
-.mdc-top-app-bar {
-  z-index: 7;
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
 }
 
-.main-content {
+.main {
   margin: 8px;
 }
 
-// BREAKPOINT min-width:900px
-
-.mdc-top-app-bar__navigation-icon {
-  display: none;
+.main-content {
+  overflow: auto;
+  height: 100%;
 }
 
-.mdc-drawer__header {
-  display: none;
+.app-bar {
+  position: absolute;
 }
 
-// BREAKPOINT max-width:900px
+// Desktop Drawer
 
-@media (max-width: 900px) {
+@media (min-width: 900px) {
+  .mdc-top-app-bar {
+    z-index: 7;
+  }
   .mdc-top-app-bar__navigation-icon {
-    display: block;
+    display: none;
   }
-
   .mdc-drawer {
-    z-index: 10;
+    position: relative;
+    box-shadow: none;
+    display: flex;
   }
-
   .mdc-drawer__header {
-    display: block;
+    display: none;
   }
+  .mdc-drawer__content {
+    padding-top: 64px;
+  }
+  .mdc-drawer-scrim {
+    display: none!important;
+  }
+}
+
+a.mdc-top-app-bar__title {
+  color: white;
 }
